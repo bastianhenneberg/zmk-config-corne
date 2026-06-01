@@ -28,13 +28,13 @@
 / {
     macros {
         ger_ae: ger_ae { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp A>; };       // ä
-        ger_AE: ger_AE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(A)>; };   // Ä
+        ger_ae_up: ger_ae_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(A)>; };   // Ä
         ger_oe: ger_oe { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp O>; };       // ö
-        ger_OE: ger_OE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(O)>; };   // Ö
+        ger_oe_up: ger_oe_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(O)>; };   // Ö
         ger_ue: ger_ue { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp U>; };       // ü
-        ger_UE: ger_UE { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(U)>; };   // Ü
+        ger_ue_up: ger_ue_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp DQT>, <&kp LS(U)>; };   // Ü
         ger_ss: ger_ss { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp S>, <&kp S>; };         // ß
-        ger_SS: ger_SS { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp LS(S)>, <&kp LS(S)>; }; // ẞ
+        ger_ss_up: ger_ss_up { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp LS(S)>, <&kp LS(S)>; }; // ẞ
         ger_eur: ger_eur { compatible = "zmk,behavior-macro"; #binding-cells = <0>; wait-ms = <5>; tap-ms = <5>; bindings = <&kp CAPS>, <&kp E>, <&kp EQUAL>; };   // €
     };
 };
@@ -42,10 +42,10 @@
 // Mod-Morph: ohne Shift Kleinbuchstabe, mit Shift Grossbuchstabe
 / {
     behaviors {
-        mm_ae: mm_ae { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ae>, <&ger_AE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        mm_oe: mm_oe { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_oe>, <&ger_OE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        mm_ue: mm_ue { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ue>, <&ger_UE>; mods = <(MOD_LSFT|MOD_RSFT)>; };
-        mm_ss: mm_ss { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ss>, <&ger_SS>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        mm_ae: mm_ae { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ae>, <&ger_ae_up>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        mm_oe: mm_oe { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_oe>, <&ger_oe_up>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        mm_ue: mm_ue { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ue>, <&ger_ue_up>; mods = <(MOD_LSFT|MOD_RSFT)>; };
+        mm_ss: mm_ss { compatible = "zmk,behavior-mod-morph"; #binding-cells = <0>; bindings = <&ger_ss>, <&ger_ss_up>; mods = <(MOD_LSFT|MOD_RSFT)>; };
     };
 };
 
